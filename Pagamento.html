@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 100px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        input, button {
+            width: 130%;
+            padding: 20px;
+            margin: 8px 0;
+            margin-left: -69px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: green;
+            color: white;
+            cursor: pointer;
+            margin-left: -43px;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+        .pix {
+            font-weight: bold;
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Finalizar Pagamento</h2>
+        <p><strong>Quantidade de Números:</strong> <span id="quantidade"></span></p>
+        <p><strong>Valor a Pagar:</strong> R$ <span id="valor"></span></p>
+
+        <input type="text" id="nome" placeholder="Nome Completo">
+        <input type="text" id="telefone" placeholder="Telefone">
+        <input type="text" id="cpf" placeholder="CPF">
+
+        <p>Copie o Pix para pagamento:</p>
+        <p class="pix" onclick="copiarPix()">98992074581</p>
+
+        <button onclick="confirmarPagamento()">Confirmar Pagamento</button>
+    </div>
+
+    <script>
+        // Recupera os dados da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const quantidade = urlParams.get('quantidade');
+        const valor = urlParams.get('valor');
+
+        // Exibe os dados na página
+        document.getElementById('quantidade').innerText = quantidade;
+        document.getElementById('valor').innerText = valor;
+
+        function copiarPix() {
+            const pix = "meuemail@pix.com"; // SEU PIX AQUI
+            navigator.clipboard.writeText(pix);
+            alert("Pix copiado para a área de transferência!");
+        }
+
+        function confirmarPagamento() {
+            const nome = document.getElementById('nome').value;
+            const telefone = document.getElementById('telefone').value;
+            const cpf = document.getElementById('cpf').value;
+
+            if (!nome || !telefone || !cpf) {
+                alert("Preencha todos os campos!");
+                return;
+            }
+
+            alert(`Pagamento enviado! Aguarde a confirmação.`);
+        }
+    </script>
+</body>
+</html>

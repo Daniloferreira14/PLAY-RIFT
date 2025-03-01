@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rifa</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 220vh;
+            background-color:rgba(0, 0, 0, 0.1); ;
+        }
+
+        .rifa-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 89%;
+            max-width: 500px;
+            margin-top: -24px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            overflow: hidden;
+            border: solid 1px rgba(0, 0, 0, 0.1);;
+            height: 200vh;
+        }
+
+        .rifa-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .rifa-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 800px;
+            position: relative;
+        }
+
+        .rifa-item img {
+            width: 130%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-top: -360px;
+        }
+
+        .info {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.5em;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .botao-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .botao-container button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100px;
+            text-align: center;
+        }
+
+        .botao-container button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .valor-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .valor-container input {
+            padding: 12px;
+            font-size: 16px;
+            width: 150px;
+            margin-right: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .valor-container button {
+            padding: 12px;
+            font-size: 16px;
+            background-color: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100px;
+        }
+
+        .valor-container button:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="rifa-container">
+        <div class="rifa-header">
+            <h1>Participe da Rifa!</h1>
+            <p>Escolha o valor e participe do sorteio</p>
+        </div>
+
+        <div class="rifa-item">
+            <img src="https://i.postimg.cc/fbJmLFYz/menu.webp" alt="Imagem do sorteio">
+            <div class="info">
+                SORTEIO COM ESCOLHA DE NÚMEROS PELO PARTICIPANTE
+            </div>
+        </div>
+
+        <div class="botao-container">
+            <!-- Todos os botões organizados -->
+            <button id="botao1">1</button>
+            <button id="botao2">2</button>
+            <button id="botao3">3</button>
+            <button id="botao4">4</button>
+            <button id="botao5">5</button>
+            <button id="botao6">6</button>
+            <button id="botao7">7</button>
+            <button id="botao8">8</button>
+            <button id="botao9">9</button>
+            <button id="botao10">10</button>
+            <button id="botao11">11</button>
+            <button id="botao12">12</button>
+            <button id="botao13">13</button>
+            <button id="botao14">14</button>
+            <button id="botao15">15</button>
+            <button id="botao16">16</button>
+            <button id="botao17">17</button>
+            <button id="botao18">18</button>
+            <button id="botao19">19</button>
+            <button id="botao20">20</button>
+            <button id="botao21">21</button>
+            <button id="botao22">22</button>
+            <button id="botao23">23</button>
+            <button id="botao24">24</button>
+            <button id="botao25">25</button>
+            <button id="botao26">26</button>
+            <button id="botao27">27</button>
+            <button id="botao28">28</button>
+            <button id="botao29">29</button>
+            <button id="botao30">30</button>
+            <button id="botao31">31</button>
+            <button id="botao32">32</button>
+            <button id="botao33">33</button>
+            <button id="botao34">34</button>
+            <button id="botao35">35</button>
+            <button id="botao36">36</button>
+            <button id="botao37">37</button>
+            <button id="botao38">38</button>
+            <button id="botao39">39</button>
+            <button id="botao40">40</button>
+            <button id="botao41">41</button>
+            <button id="botao42">42</button>
+            <button id="botao43">43</button>
+            <button id="botao44">44</button>
+            <button id="botao45">45</button>
+            <button id="botao46">46</button>
+            <button id="botao47">47</button>
+            <button id="botao48">48</button>
+            <button id="botao49">49</button>
+            <button id="botao50">50</button>
+            <button id="botao51">51</button>
+            <button id="botao52">52</button>
+            <button id="botao53">53</button>
+            <button id="botao54">54</button>
+            <button id="botao55">55</button>
+            <button id="botao56">56</button>
+            <button id="botao57">57</button>
+            <button id="botao58">58</button>
+            <button id="botao59">59</button>
+            <button id="botao60">60</button>
+            <button id="botao61">61</button>
+            <button id="botao62">62</button>
+            <button id="botao63">63</button>
+            <button id="botao64">64</button>
+            <button id="botao65">65</button>
+            <button id="botao66">+66</button>
+            <button id="botao67">67</button>
+            <button id="botao68">68</button>
+            <button id="botao69">69</button>
+            <button id="botao70">70</button>
+            <button id="botao71">71</button>
+            <button id="botao72">72</button>
+            <button id="botao73">73</button>
+            <button id="botao7r">74</button>
+            <button id="botao75">75</button>
+            <button id="botao76">76</button>
+            <button id="botao77">77</button>
+            
+                        <button id="botao78">78</button>
+            <button id="botao79">79</button>
+            <button id="botao80">80</button>
+            <button id="botao81">81</button>
+            <button id="botao82">82</button>
+            <button id="botao83">83</button>
+            <button id="botao84">84</button>
+            <button id="botao85">85</button>
+            <button id="botao86">86</button>
+            <button id="botao87">87</button>
+            <button id="botao88">88</button>
+            <button id="botao89">89</button>
+            <button id="botao90">90</button>
+            <button id="botao91">91</button>
+            <button id="botao92">92</button>
+            <button id="botao93">93</button>
+            <button id="botao94">94</button>
+            <button id="botao95">95</button>
+            <button id="botao96">96</button>
+            <button id="botao97">97</button>
+            <button id="botao98">98</button>
+            <button id="botao99">99</button>
+            <button id="botao100">100</button>
+            <button id="botao101">101</button>
+            <button id="botao102">102</button>
+            <button id="botao103">103</button>
+            <button id="botao104">104</button>
+            <button id="botao105">105</button>
+            <button id="botao106">106</button>
+            <button id="botao107">107</button>
+            <button id="botao108">108</button>
+            <button id="botao109">109</button>
+            <button id="botao110">110</button>
+            <button id="botao111">111</button>
+            <button id="botao112">112</button>
+            <button id="botao113">113</button>
+            <button id="botao114">114</button>
+            <button id="botao115">115</button>
+            <button id="botao116">116</button>
+            <button id="botao117">117</button>
+            <button id="botao118">118</button>
+            <button id="botao119">119</button>
+            <button id="botao120">120</button>
+            <button id="botao121">121</button>
+            <button id="botao122">122</button>
+            <button id="botao123">123</button>
+            <button id="botao124">124</button>
+            <button id="botao125">125</button>
+            <button id="botao126">126</button>
+            <button id="botao127">127</button>
+            <button id="botao128">128</button>
+        </div>
+
+        <div class="valor-container">
+            <input type="number" placeholder="Valor" min="1">
+            <button>Quero Participar</button>
+        </div>
+    </div>
+    
+  <script>
+let numerosSelecionados = [];
+const precoPorNumero = 5;
+const inputValor = document.querySelector('.valor-container input');
+const botaoParticipar = document.querySelector('.valor-container button');
+
+const botoes = document.querySelectorAll('.botao-container button');
+
+botoes.forEach(botao => {
+    botao.addEventListener('click', () => {
+        let numero = botao.innerText.replace('+', ''); // Pegando apenas o número
+
+        if (numerosSelecionados.includes(numero)) {
+            // Remover número se já estiver selecionado
+            numerosSelecionados = numerosSelecionados.filter(n => n !== numero);
+            botao.style.backgroundColor = '#fafafa';
+            botao.style.color = 'black';
+        } else {
+            // Adicionar número se ainda não tiver 10 selecionados
+            if (numerosSelecionados.length < 10) {
+                numerosSelecionados.push(numero);
+                botao.style.backgroundColor = 'green';
+                botao.style.color = 'white';
+            } else {
+                alert("Você só pode escolher até 10 números!");
+            }
+        }
+
+        atualizarValor();
+    });
+});
+
+function atualizarValor() {
+    let total = numerosSelecionados.length * precoPorNumero;
+    inputValor.value = total;
+}
+
+botaoParticipar.addEventListener('click', () => {
+    if (numerosSelecionados.length === 0) {
+        alert("Escolha pelo menos um número antes de participar!");
+        return;
+    }
+
+    // Redirecionar para a página de pagamento com os dados
+    window.location.href = `pagamento.html?quantidade=${numerosSelecionados.length}&valor=${inputValor.value}`;
+});
+
+// Função para obter os parâmetros da URL
+function obterParametro(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+// Exibir os valores na página de pagamento
+window.onload = function() {
+    if (document.getElementById('quantidade') && document.getElementById('valor')) {
+        document.getElementById('quantidade').innerText = "Quantidade: " + obterParametro('quantidade');
+        document.getElementById('valor').innerText = "Total a pagar: R$ " + obterParametro('valor');
+    }
+};
+
+// Função para copiar o PIX
+function copiarPix() {
+    let pixInput = document.getElementById("pix").value;
+    navigator.clipboard.writeText(pixInput)
+        .then(() => alert("PIX copiado!"))
+        .catch(err => console.error('Erro ao copiar: ', err));
+}
+
+// Simula a confirmação do pagamento
+function finalizarPagamento() {
+    let nome = document.getElementById("nome").value;
+    let telefone = document.getElementById("telefone").value;
+    let cpf = document.getElementById("cpf").value;
+
+    if (nome === "" || telefone === "" || cpf === "") {
+        alert("Preencha todos os campos antes de continuar!");
+        return;
+    }
+
+    alert("Pagamento confirmado! Aguarde a liberação da sua participação.");
+    window.location.href = "Pagamento.html";
+}
+</script>
+  </script>
+</body>
+</html>
